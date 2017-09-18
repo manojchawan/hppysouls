@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.crusher.hppysouls">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".Feeds"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gangs.GangList"
+            android:label="@string/title_activity_gang_list"
+            android:parentActivityName=".Feeds" />
+        <activity
+            android:name=".gangs.AddGang"
+            android:parentActivityName=".gangs.GangList" />
+        <activity
+            android:name=".profile.Profile"
+            android:parentActivityName=".Feeds" />
+        <activity
+            android:name=".Share"
+            android:parentActivityName=".Feeds" />
+        <activity
+            android:name=".Notifications"
+            android:parentActivityName=".Feeds" />
+        <activity
+            android:name=".SupportActivity"
+            android:parentActivityName=".Feeds" />
+        <activity
+            android:name=".chats.ChatActivity"
+            android:parentActivityName=".chatLists.ChatList" />
+        <activity
+            android:name=".chatLists.ChatList"
+            android:parentActivityName=".Feeds" />
+        <activity
+            android:name=".gangs.GangChatActivity"
+            android:parentActivityName=".gangs.GangList" />
+        <activity
+            android:name=".gangs.GangSetting"
+            android:parentActivityName=".gangs.GangChatActivity" />
+        <activity
+            android:name=".gangs.AddMembers"
+            android:parentActivityName=".gangs.GangChatActivity" />
+
+        <service android:name=".firebaseFCM.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".firebaseFCM.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".favourite.Favourites"
+            android:label="@string/title_activity_favorites"
+            android:parentActivityName=".Feeds"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.crusher.hppysouls.Feeds" />
+        </activity>
+        <activity
+            android:name=".favourite.UserProfile"
+            android:label="@string/title_activity_user_profile"
+            android:parentActivityName=".favourite.Favourites"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.crusher.hppysouls.favourite.Favourites" />
+        </activity>
+        <activity android:name=".ForgotPassword" />
+
+        <service
+            android:name=".MyService"
+            android:exported="false" />
+    </application>
+
+</manifest>

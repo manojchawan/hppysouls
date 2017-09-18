@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.crusher.hppysouls.chats.ChatActivity">
+
+    <ListView
+        android:id="@+id/messages_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_panel"
+        android:divider="@null"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+
+    <RelativeLayout
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:id="@+id/first_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="It's easy to Start a conversation."
+            android:textColor="@color/skyblue"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/second_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/first_text"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="Send a greeting in 1 tap."
+            android:textColor="@color/skyblue"
+            android:textSize="18sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chatImage"
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:layout_below="@id/second_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:src="@drawable/logo_4" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/send_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chatImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:padding="7dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            fancy:fb_defaultColor="@color/skyblue"
+            fancy:fb_radius="15dp"
+            fancy:fb_text="Send Greeting"
+            fancy:fb_textColor="@color/white"
+            fancy:fb_textSize="22sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/new_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:ems="10"
+            android:gravity="start"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/send_message"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_menu_send" />
+    </LinearLayout>
+</RelativeLayout>

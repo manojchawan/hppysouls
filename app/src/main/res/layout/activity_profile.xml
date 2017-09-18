@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        tools:context="com.example.crusher.hppysouls.profile.Profile">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:alpha="0.8"
+                android:scaleType="fitXY"
+                android:src="@drawable/profile_back" />
+
+            <LinearLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/user_pic"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/back_test_2"
+                    app:civ_border_color="#000"
+                    app:civ_border_width="3dp" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.50"
+                android:padding="16dp"
+                android:text="Name"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/user_name_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:padding="16dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ACACAC" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.50"
+                android:padding="16dp"
+                android:text="Age"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/age_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:hint="Age"
+                android:inputType="numberSigned"
+                android:padding="16dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ACACAC" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.50"
+                android:padding="16dp"
+                android:text="Occupation"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/occupation_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:hint="Occupation"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ACACAC" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.55"
+                android:padding="16dp"
+                android:text="Gender"
+                android:textSize="14sp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinner_gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ACACAC" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.55"
+                android:padding="16dp"
+                android:text="Preference"
+                android:textSize="14sp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinner_preference"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:padding="16dp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ACACAC" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.50"
+                android:padding="16dp"
+                android:text="Organization"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/org_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:hint="Organization"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ACACAC" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Education"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.35"
+                android:padding="16dp"
+                android:text="Degree"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edu_degree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:padding="16dp"
+                android:text="Institute"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edu_institute"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/edu_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:text="ADD"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/edu_list"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ACACAC" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Interests"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/linearAdd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/interest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="5"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="e.g. Music" />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/addBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                fancy:fb_defaultColor="@color/colorPrimaryDark"
+                fancy:fb_radius="29dp"
+                fancy:fb_text=" + "
+                fancy:fb_textColor="#fff"
+                fancy:fb_textSize="22sp" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/Grid1"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:horizontalSpacing="0dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0dp" />
+
+    </LinearLayout>
+</ScrollView>

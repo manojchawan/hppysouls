@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeContainerUser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.crusher.hppysouls.favourite.UserProfile"
+    tools:showIn="@layout/activity_user_profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/profileImg"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/feeds_back3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Failed To load."
+                        android:textAllCaps="true"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/seperator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text=","
+                        android:textAllCaps="true"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/user_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end">
+
+                        <ImageView
+                            android:id="@+id/online"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_local_offer_black_24dp"
+                            android:tint="#4caf50" />
+
+                        <ImageView
+                            android:id="@+id/verification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_beenhere_black_24dp"
+                            android:tint="#4caf50" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/occupation" />
+
+                    <TextView
+                        android:id="@+id/user_occupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text=","
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/user_organization"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/education_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Interests"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <GridView
+                    android:id="@+id/grid_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="130dp"
+                    android:layout_marginBottom="100dp"
+                    android:horizontalSpacing="0dp"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="0dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

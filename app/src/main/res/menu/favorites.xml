@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_chatList"
+        android:icon="@drawable/chatlist_icon"
+        app:showAsAction="always"
+        android:title="Chats"/>
+
+    <item
+        android:id="@+id/menu_previous"
+        android:icon="@android:drawable/arrow_up_float"
+        android:title="Previous"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_next"
+        android:icon="@android:drawable/arrow_down_float"
+        android:title="Next"
+        app:showAsAction="always" />
+</menu>
